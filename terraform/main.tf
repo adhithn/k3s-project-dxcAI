@@ -11,9 +11,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "my-k3s-terraform-state-bucket"   # 🔴 CHANGE THIS
+    bucket         = "my-k3s-terraform-state-bkt"
     key            = "k3s/terraform.tfstate"
-    region         = "ap-southeast-2"
+    region         = "ap-south-1"
     use_lockfile   = "true"
   }
 }
