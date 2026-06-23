@@ -5,7 +5,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-    
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
       run: |
         kubectl apply -f k8s/nginx-config.yaml
         kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/service.yaml
+        kubectl apply -f k8s/svc.yaml
         kubectl apply -f k8s/ingress.yaml
 
     - name: Verify deployment
