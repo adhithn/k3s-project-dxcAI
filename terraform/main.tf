@@ -27,18 +27,6 @@ provider "aws" {
 }
 
 #############################################
-# Variables
-#############################################
-
-variable "region" {
-  default = "ap-south-1"
-}
-
-variable "key_name" {
-  description = "EC2 Key Pair name"
-}
-
-#############################################
 # Security Group (Ingress-based)
 #############################################
 
