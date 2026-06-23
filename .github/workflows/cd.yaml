@@ -31,10 +31,10 @@ jobs:
 
     - name: Deploy Nginx app
       run: |
-        kubectl apply -f k8s/nginx-config.yaml
-        kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/svc.yaml
-        kubectl apply -f k8s/ingress.yaml
+        kubectl apply -f k8s/nginx/nginx-config.yaml
+        kubectl apply -f k8s/nginx/deployment.yaml
+        kubectl apply -f k8s/nginx/svc.yaml
+        kubectl apply -f k8s/nginx/ingress.yaml
 
     - name: Verify deployment
       run: |
