@@ -72,8 +72,8 @@ resource "aws_security_group" "k3s_sg" {
 #############################################
 
 resource "aws_instance" "k3s_server" {
-  ami           = "ami-0f58b397bc5c1f2e8"  # ✅ Update if needed
-  instance_type = "t3.micro"
+  ami           = "ami-0f58b397bc5c1f2e8"
+  instance_type = "t3.small"
   key_name      = var.key_name
 
   vpc_security_group_ids = [aws_security_group.k3s_sg.id]
