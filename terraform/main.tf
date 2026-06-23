@@ -13,8 +13,8 @@ terraform {
   backend "s3" {
     bucket         = "my-k3s-terraform-state-bucket"   # 🔴 CHANGE THIS
     key            = "k3s/terraform.tfstate"
-    region         = "ap-south-1"
-    dynamodb_table = "terraform-lock"
+    region         = "ap-southeast-2"
+    use_lockfile   = "true"
   }
 }
 
