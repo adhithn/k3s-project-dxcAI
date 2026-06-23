@@ -1,7 +1,7 @@
 name: Terraform Infra
 
 on:
-  workflow_dispatch   # manual trigger (better for demo)
+  workflow_dispatch
 
 jobs:
   terraform:
