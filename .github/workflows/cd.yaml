@@ -36,6 +36,10 @@ jobs:
         kubectl apply -f k8s/nginx/svc.yaml
         kubectl apply -f k8s/nginx/ingress.yaml
 
+    - name: Wait for deployment to be ready
+      run: sleep 30s
+      shell: bash
+
     - name: Verify deployment
       run: |
         kubectl get pods
